@@ -24,6 +24,10 @@ class Customer {
         return SSN;
     }
 }
-class Sale{
+class Member extends Customer {
+    super(int ss){
+        SSN = ss;
+    }
+    private int SSN;
 
 }

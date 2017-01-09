@@ -41,7 +41,9 @@ public class Customer {
         while(true){
             if(buy.equals("membership")){
                 if(getMember()){
-                    System.out.println("Customer already has a membership.");
+                    System.out.println("Customer already has a membership." +
+                            "\nPlease buy something else.");
+                    buy = sc2.nextLine();
                 }
                 else{
                     buym++;
@@ -51,7 +53,9 @@ public class Customer {
                 buycl++;
             }
             else if(buy.equals("retail")){
-                System.out.println("Sorry, no retail is available for purchase right now.");
+                System.out.println("Sorry, no retail is available for purchase right now." +
+                        "\nPlease buy something else.");
+                buy = sc2.nextLine();
                 //sout("What items from retail?");
                 //while(true){
                 // if(buy2.equals("<item>"){
@@ -65,13 +69,17 @@ public class Customer {
                     buyaq++;
                 }
                 else{
-                    System.out.println("Non-members may not buy aquatics!");
+                    System.out.println("Non-members may not buy aquatics!" +
+                            "\nPlease buy something else.");
+                    buy = sc2.nextLine();
                 }
             }
             else if(buy.equals("personal trainer")){
                 System.out.println("How many hours would you like to have a personal trainer for?");
                 double hr = sc.nextDouble();
                 buyp = buyp + hr;
+                System.out.println("What else would you like to buy?");
+                buy = sc2.nextLine();
             }
             else if(buy.equals("nothing")){
                 System.out.println("Thank you for shopping!");

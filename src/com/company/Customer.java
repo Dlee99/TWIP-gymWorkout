@@ -51,6 +51,8 @@ public class Customer {
             }
             else if(buy.equals("classes")){
                 buycl++;
+                System.out.println("What else would you like to purchase?");
+                buy = sc2.nextLine();
             }
             else if(buy.equals("retail")){
                 System.out.println("Sorry, no retail is available for purchase right now." +
@@ -67,6 +69,8 @@ public class Customer {
             else if(buy.equals("aquatics")){
                 if(getMember()){
                     buyaq++;
+                    System.out.println("What else woul you like to purchase?");
+                    buy = sc2.nextLine();
                 }
                 else{
                     System.out.println("Non-members may not buy aquatics!" +

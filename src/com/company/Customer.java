@@ -69,7 +69,7 @@ public class Customer {
             else if(buy.equals("aquatics")){
                 if(getMember()){
                     buyaq++;
-                    System.out.println("What else woul you like to purchase?");
+                    System.out.println("What else would you like to purchase?");
                     buy = sc2.nextLine();
                 }
                 else{
@@ -101,7 +101,6 @@ public class Customer {
             }
         }
         System.out.println("That will cost: $" + getCost() + "\nAnd a monthly rate of: $" + getMonthly());
-        System.out.println("Customer");
     }
     public double getMonthly(){
         if(getMember()){
